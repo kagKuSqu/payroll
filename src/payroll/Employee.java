@@ -32,5 +32,9 @@ public class Employee {
 		this.name = name;
 		this.address = address;
 	}
+	public PaymentClassification getPaymentClassification() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }
