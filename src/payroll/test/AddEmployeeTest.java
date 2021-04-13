@@ -12,6 +12,8 @@ public class AddEmployeeTest {
 		String name="Bill";
 		String address="Home";
 		double hourlyRate=12.5;
+		Transaction t=new AddHourlyEmployeeTransation(empId,name,address,hourlyRate);
+		t.excute();
 	}
 
 }
