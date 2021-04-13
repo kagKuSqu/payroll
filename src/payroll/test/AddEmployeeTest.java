@@ -6,10 +6,12 @@ import org.junit.Test;
 
 import payroll.Employee;
 import payroll.PaymentClassification;
+import payroll.PaymentMethod;
 import payroll.PaymentMothod;
 import payroll.Payrolldatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
+import payroll.method.HolaMethod;
 import payroll.trans.AddHourlyEmployeeTransation;
 
 public class AddEmployeeTest {
