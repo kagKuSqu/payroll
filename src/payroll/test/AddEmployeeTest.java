@@ -15,6 +15,7 @@ public class AddEmployeeTest {
 		Transaction t=new AddHourlyEmployeeTransation(empId,name,address,hourlyRate);
 		t.excute();
 		Employee e=Payrolldatabase.getEmployee(empId);
+		assertNotNull(e);
 	}
 
 }
