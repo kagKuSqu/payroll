@@ -14,6 +14,7 @@ public class AddEmployeeTest {
 		double hourlyRate=12.5;
 		Transaction t=new AddHourlyEmployeeTransation(empId,name,address,hourlyRate);
 		t.excute();
+		Employee e=Payrolldatabase.getEmployee(empId);
 	}
 
 }
