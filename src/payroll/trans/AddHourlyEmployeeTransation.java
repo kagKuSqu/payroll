@@ -1,8 +1,10 @@
 package payroll.trans;
 
 import payroll.Employee;
+import payroll.PayrollDatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
+import payroll.method.HolaMethod;
 
 public class AddHourlyEmployeeTransation implements Transaction {
 
@@ -22,6 +24,8 @@ public class AddHourlyEmployeeTransation implements Transaction {
 	public void excute() {
 		Employee employee=new Employee(empId,name,address);
 		employee.setPaymentClassification(new HourlyClassification(hourlyRate));
+		employee.setPaymentMethod(new HolaMethod());
+		PayrollDatabase.save(employee);
 	}
 
 }
