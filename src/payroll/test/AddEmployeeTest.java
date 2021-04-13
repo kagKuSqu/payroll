@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import payroll.Employee;
+import payroll.PaymentClassification;
 import payroll.Payrolldatabase;
 import payroll.Transaction;
 import payroll.trans.AddHourlyEmployeeTransation;
