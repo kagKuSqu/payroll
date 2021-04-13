@@ -2,6 +2,7 @@ package payroll.trans;
 
 import payroll.Employee;
 import payroll.Transaction;
+import payroll.classification.HourlyClassification;
 
 public class AddHourlyEmployeeTransation implements Transaction {
 
