@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import payroll.Employee;
 import payroll.PaymentClassification;
+import payroll.PaymentMothod;
 import payroll.Payrolldatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
