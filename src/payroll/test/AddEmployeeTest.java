@@ -8,7 +8,10 @@ public class AddEmployeeTest {
 
 	@Test
 	public void testAddHourlyEmployeeTransaction() {
-		
+		int empId=1001;
+		String name="Bill";
+		String address="Home";
+		double hourlyRate=12.5;
 	}
 
 }
