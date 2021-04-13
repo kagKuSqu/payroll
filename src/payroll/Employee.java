@@ -4,6 +4,10 @@ public class Employee {
 	private int emplId;
 	private String name;
 	private String address;
+	
+	public Employee() {
+		
+	}
 	public int getEmplId() {
 		return emplId;
 	}
