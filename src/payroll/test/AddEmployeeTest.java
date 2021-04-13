@@ -8,6 +8,7 @@ import payroll.Employee;
 import payroll.PaymentClassification;
 import payroll.PaymentMethod;
 import payroll.PaymentMothod;
+import payroll.PayrollDatabase;
 import payroll.Payrolldatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
@@ -24,7 +25,7 @@ public class AddEmployeeTest {
 		double hourlyRate=12.5;
 		Transaction t=new AddHourlyEmployeeTransation(empId,name,address,hourlyRate);
 		t.excute();
-		Employee e=Payrolldatabase.getEmployee(empId);
+		Employee e=PayrollDatabase.getEmployee(empId);
 		assertNotNull(e);
 		assertEquals(name,e.getName());
 		assertEquals(address,e.getAddress());
