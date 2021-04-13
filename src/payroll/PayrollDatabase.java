@@ -11,7 +11,7 @@ public class PayrollDatabase {
 			return employees.get(empId);
 		}
 		public static void save(Employee employee) {
-			// TODO Auto-generated method stub
+			employees.put(employee.getEmplId(),employee);
 			
 		}
 
