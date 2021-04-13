@@ -16,6 +16,12 @@ public class AddEmployeeTest {
 		t.excute();
 		Employee e=Payrolldatabase.getEmployee(empId);
 		assertNotNull(e);
+		assertEquals(name,e.getName());
+		assertEquals(address,e.getAddress());
+		PaymentClassification pc=e.getPaymentClassification();
+		assertTrue(pc instanceof HourlyClassification);
+		HourlyClassification hc=(HourlyClassification) pc;
+		assertEquals(hourlyRate,hc.getHourlyRate(),0.01);
 	}
 
 }
