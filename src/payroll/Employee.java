@@ -22,5 +22,11 @@ public class Employee {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	public Employee(int emplId, String name, String address) {
+		super();
+		this.emplId = emplId;
+		this.name = name;
+		this.address = address;
+	}
 	
 }
