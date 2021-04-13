@@ -22,6 +22,8 @@ public class AddEmployeeTest {
 		assertTrue(pc instanceof HourlyClassification);
 		HourlyClassification hc=(HourlyClassification) pc;
 		assertEquals(hourlyRate,hc.getHourlyRate(),0.01);
+		PaymentMothod pm=e.getPaymentMethod();
+		assertTrue(pm instanceof HolaMethod);
 	}
 
 }
