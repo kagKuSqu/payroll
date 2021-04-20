@@ -1,6 +1,7 @@
 package payroll.trans;
 
 import payroll.Employee;
+import payroll.PaymentClassification;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
 import payroll.classification.SalariedClassification;
@@ -27,7 +28,7 @@ public class AddSalariedEmployeeTransaction implements Transaction {
 
 	}
 
-	protected SalariedClassification getPaymentClassification() {
+	protected PaymentClassification getPaymentClassification() {
 		return new SalariedClassification(salary);
 	}
 
