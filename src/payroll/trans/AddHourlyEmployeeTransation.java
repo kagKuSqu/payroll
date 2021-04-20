@@ -8,9 +8,7 @@ public class AddHourlyEmployeeTransation extends AddEmployeeTransaction implemen
 
 	private double hourlyRate;
 	public AddHourlyEmployeeTransation(int empId, String name, String address, double hourlyRate) {
-		this.empId = empId;
-		this.name = name;
-		this.address = address;
+		super(empId,name,address);
 		this.hourlyRate = hourlyRate;
 	}
 
