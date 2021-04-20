@@ -9,9 +9,12 @@ import payroll.method.HoldMethod;
 public abstract class AddEmployeeTransaction implements Transaction{
 
 	protected int empId;
-
-	protected abstract PaymentClassification getPaymentClassification();
-
+	public AddEmployeeTransaction(int empId, String address, String name) {
+		super();
+		this.empId = empId;
+		this.address = address;
+		this.name = name;
+	}
 	protected String address;
 	protected String name;
 
@@ -26,5 +29,7 @@ public abstract class AddEmployeeTransaction implements Transaction{
 		employee.setPaymentMethod(new HoldMethod());
 		PayrollDatabase.save(employee);
 	}
+	protected abstract PaymentClassification getPaymentClassification();
+
 
 }
