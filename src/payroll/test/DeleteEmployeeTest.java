@@ -7,7 +7,7 @@ import org.junit.Test;
 public class DeleteEmployeeTest {
 
 	@Test
-	public void test() {
+	public void testDeleteEmployeeExisted() {
 		fail("Not yet implemented");
 	}
 
