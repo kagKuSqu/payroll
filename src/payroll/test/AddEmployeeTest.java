@@ -36,5 +36,8 @@ public class AddEmployeeTest {
 		PaymentMethod pm=e.getPaymentMethod();
 		assertTrue(pm instanceof HolaMethod);
 	}
+	public void testAddSalariedEmployee() {
+		
+	}
 
 }
