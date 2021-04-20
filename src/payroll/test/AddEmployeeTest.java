@@ -12,6 +12,7 @@ import payroll.PayrollDatabase;
 import payroll.Payrolldatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
+import payroll.classification.SalariedClassification;
 import payroll.method.HoldMethod;
 import payroll.trans.AddHourlyEmployeeTransation;
 import payroll.trans.AddSalariedEmployeeTransaction;
