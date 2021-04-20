@@ -1,5 +1,7 @@
 package payroll.trans;
 
+import payroll.Employee;
+import payroll.PayrollDatabase;
 import payroll.Transaction;
 
 public class AddSalariedEmployeeTransaction implements Transaction {
@@ -16,7 +18,10 @@ public class AddSalariedEmployeeTransaction implements Transaction {
 
 	@Override
 	public void excute() {
-		// TODO Auto-generated method stub
+	Employee employee=new Employee(empId,name,address);
+	employee.getPaymentClassification(new SalariedClassification(salary));
+	employee.setPaymentMethod(new HoldMethod());
+	PayrollDatabase.save(employee);
 
 	}
 
