@@ -2,6 +2,6 @@ package payroll.method;
 
 import payroll.PaymentMethod;
 
-public class HolaMethod extends PaymentMethod {
+public class HoldMethod extends PaymentMethod {
 
 }
