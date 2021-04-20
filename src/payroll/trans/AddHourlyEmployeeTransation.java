@@ -23,9 +23,13 @@ public class AddHourlyEmployeeTransation implements Transaction {
 	@Override
 	public void excute() {
 		Employee employee=new Employee(empId,name,address);
-		employee.setPaymentClassification(new HourlyClassification(hourlyRate));
+		employee.setPaymentClassification(getPaymentClassification());
 		employee.setPaymentMethod(new HoldMethod());
 		PayrollDatabase.save(employee);
+	}
+
+	protected HourlyClassification getPaymentClassification() {
+		return new HourlyClassification(hourlyRate);
 	}
 
 }
