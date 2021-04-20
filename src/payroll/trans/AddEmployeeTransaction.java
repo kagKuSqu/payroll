@@ -8,15 +8,15 @@ import payroll.method.HoldMethod;
 
 public abstract class AddEmployeeTransaction implements Transaction{
 
-	protected int empId;
+	private int empId;
 	public AddEmployeeTransaction(int empId, String address, String name) {
 		super();
 		this.empId = empId;
 		this.address = address;
 		this.name = name;
 	}
-	protected String address;
-	protected String name;
+	private String address;
+	private String name;
 
 	public AddEmployeeTransaction() {
 		super();
