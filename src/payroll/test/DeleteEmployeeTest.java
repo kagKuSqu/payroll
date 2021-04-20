@@ -8,7 +8,9 @@ public class DeleteEmployeeTest {
 
 	@Test
 	public void testDeleteEmployeeExisted() {
-		fail("Not yet implemented");
+		int empId=2001;
+		new AddHourlyEmployeeTransaction(empId,"Bill",12.5).execute();
+		
 	}
 
 }
