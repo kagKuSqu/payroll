@@ -1,5 +1,7 @@
 package payroll.trans;
 
+import payroll.Employee;
+import payroll.PayrollDatabase;
 import payroll.Transaction;
 
 public class DeleteEmployeeTransaction implements Transaction {
@@ -13,7 +15,12 @@ public class DeleteEmployeeTransaction implements Transaction {
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
+		Employee employee=PayrollDatabase.getEmployee(empId);
+		if(employee!=null) {
+			PayrollDatabase.deleteEmployee(empId);
+		}else {
+			throw new NoSuchEmployeeException("No such employee empId="+empId);
+		}
 
 	}
 
