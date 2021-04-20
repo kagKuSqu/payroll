@@ -7,8 +7,23 @@ import org.junit.Test;
 public class TimeCardTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testOneTimeCardToHourlyEmployee() {
+		
 	}
+	public void testTwoTimeCardToHourlyEmployee() {
+		
+	}
+	public void testTimeCardToSalariedEmployee() {
+		
+	}
+	public void testTimeCardToCommissionedEmployee() {
+		
+	}
+	public void testTimeCardToNoSuchEmployee() {
+		
+	}
+
+
+
 
 }
