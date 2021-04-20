@@ -9,27 +9,31 @@ import payroll.method.HoldMethod;
 public abstract class AddEmployeeTransaction implements Transaction{
 
 	private int empId;
-	public AddEmployeeTransaction(int empId, String address, String name) {
-		super();
-		this.empId = empId;
-		this.address = address;
-		this.name = name;
-	}
-	private String address;
 	private String name;
+	private String address;
 
 	public AddEmployeeTransaction() {
 		super();
 	}
 
-	@Override
-	public void excute() {
-		Employee employee=new Employee(empId,name,address);
-		employee.setPaymentClassification(getPaymentClassification());
-		employee.setPaymentMethod(new HoldMethod());
-		PayrollDatabase.save(employee);
+	public AddEmployeeTransaction(int empId, String name, String address) {
+		super();
+		this.empId = empId;
+		this.name = name;
+		this.address = address;
 	}
+
 	protected abstract PaymentClassification getPaymentClassification();
+
+	@Override
+	public void execute() {
+		Employee e = new Employee(empId, name, address);
+		e.setPaymentClassification(getPaymentClassification());
+		e.setPaymentMethod(new HoldMethod());
+		PayrollDatabase.saveEmployee(e);
+	}
+
+	
 
 
 }

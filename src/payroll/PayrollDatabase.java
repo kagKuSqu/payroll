@@ -10,9 +10,9 @@ public class PayrollDatabase {
 			// TODO Auto-generated method stub
 			return employees.get(empId);
 		}
-		public static void save(Employee employee) {
-			employees.put(employee.getEmplId(),employee);
-			
+		
+		public static void saveEmployee(Employee e) {
+			employees.put(e.getEmpId(), e);
 		}
 
 }

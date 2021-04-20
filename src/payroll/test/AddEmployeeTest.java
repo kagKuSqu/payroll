@@ -7,9 +7,7 @@ import org.junit.Test;
 import payroll.Employee;
 import payroll.PaymentClassification;
 import payroll.PaymentMethod;
-import payroll.PaymentMothod;
 import payroll.PayrollDatabase;
-import payroll.Payrolldatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
 import payroll.classification.SalariedClassification;
@@ -26,16 +24,17 @@ public class AddEmployeeTest {
 		String address="Home";
 		double hourlyRate=12.5;
 		Transaction t=new AddHourlyEmployeeTransation(empId,name,address,hourlyRate);
-		t.excute();
+		t.execute();
 		Employee e=PayrollDatabase.getEmployee(empId);
 		assertNotNull(e);
-		assertEquals(name,e.getName());
-		assertEquals(address,e.getAddress());
-		PaymentClassification pc=e.getPaymentClassification();
+		assertEquals(empId, e.getEmpId());
+		assertEquals(name, e.getName());
+		assertEquals(address, e.getAddress());
+		PaymentClassification pc = e.getPaymentClassification();
 		assertTrue(pc instanceof HourlyClassification);
-		HourlyClassification hc=(HourlyClassification) pc;
-		assertEquals(hourlyRate,hc.getHourlyRate(),0.01);
-		PaymentMethod pm=e.getPaymentMethod();
+		HourlyClassification hc = (HourlyClassification) pc;
+		assertEquals(hourlyRate, hc.getHourlyRate(), 0.01);
+		PaymentMethod pm = e.getPaymentMethod();
 		assertTrue(pm instanceof HoldMethod);
 	}
 	public void testAddSalariedEmployee() {
@@ -45,7 +44,7 @@ public class AddEmployeeTest {
 		double salary=2410.0;
 		
 		Transaction t=new AddSalariedEmployeeTransaction(empId,name,address,salary);
-		t.excute();
+		t.execute();
 		
 		Employee e=PayrollDatabase.getEmployee(empId);
 		assertNotNull(e);
