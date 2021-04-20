@@ -3,6 +3,8 @@ package payroll.trans;
 import payroll.Employee;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
+import payroll.classification.SalariedClassification;
+import payroll.method.HoldMethod;
 
 public class AddSalariedEmployeeTransaction implements Transaction {
 	private int empId;
@@ -19,7 +21,7 @@ public class AddSalariedEmployeeTransaction implements Transaction {
 	@Override
 	public void excute() {
 	Employee employee=new Employee(empId,name,address);
-	employee.getPaymentClassification(new SalariedClassification(salary));
+	employee.setPaymentClassification(new SalariedClassification(salary));
 	employee.setPaymentMethod(new HoldMethod());
 	PayrollDatabase.save(employee);
 
